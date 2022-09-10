@@ -1,29 +1,20 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
-*main - Prints all combinations of two digits with,
-* and space followed by new line
-*
-*Return: returns 0
-*/
+ * main - main block
+ * Description: Get a random number and check its last digit, compare it with 5
+ * Return: 0
+ */
 int main(void)
 {
-	int digit1, digit2;
+	char c = 'a';
 
-	for (digit1 = 0; digit1 < 9; digit1++)
+	while (c <= 'z')
 	{
-		for (digit2 = digit1 + 1; digit2 < 10; digit2++)
-		{
-
-			putchar((digit1 % 10) + '0');
-			putchar((digit2 % 10) + '0');
-
-			if (digit1 == 8 && digit2 == 9)
-				continue;
-
-			putchar(',');
-			putchar(' ');
-		}
+		putchar(c);
+		c++;
 	}
+
 	putchar('\n');
 	return (0);
 }
