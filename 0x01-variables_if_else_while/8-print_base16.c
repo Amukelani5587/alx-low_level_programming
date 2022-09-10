@@ -1,17 +1,26 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
-*main - Program to print alphabet letters in reverse followed by new line
+*main - Prints all single digits of base 16 followed by new line
 *
-*Return: return 0
+*Return: returns 0
 */
 int main(void)
 {
-	int letter;
+	int digit;
 
-	for (letter = 'z'; letter >= 'a'; letter--)
+	for (digit = '0'; digit <= '9'; digit++)
 	{
-		putchar(letter);
+		putchar(digit);
+		if (digit == '9')
+		{
+			digit = 'a';
+			for (; digit <= 'f'; digit++)
+			{
+				putchar(digit);
+			}
+			break;
+		}
 	}
 	putchar('\n');
 	return (0);
